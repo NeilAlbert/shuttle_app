@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('admin') }}">Admin Dashboard</a>
+  </div>
+
+  <div class="container">
+    <div class="booking-card">
+      <h2>Admin Dashboard</h2>
+      {% if bookings %}
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Student ID</th>
+            <th>Department</th>
+            <th>Location</th>
+            <th>Ticket</th>
+            <th>Fare (GH₵)</th>
+          </tr>
+          {% for b in bookings %}
+          <tr>
+            <td>{{ b.name }}</td>
+            <td>{{ b.student_id }}</td>
+            <td>{{ b.department }}</td>
+            <td>{{ b.location }}</td>
+            <td>{{ b.ticket_type }}</td>
+            <td>{{ b.fare }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <p style="text-align: center;">No bookings yet.</p>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

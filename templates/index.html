@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <title>Shuttle Booking</title>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('admin') }}">Admin Dashboard</a>
+  </div>
+  
+  <div class="container">
+  <div class="booking-card">
+    <h2>Shuttle Booking Form</h2>
+    
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul style="color: red; list-style: none; padding: 0;">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="student_id">Student ID:</label>
+      <input type="text" id="student_id" name="student_id" required>
+
+      <label for="department">Department:</label>
+      <input type="text" id="department" name="department" required>
+
+      <label for="location">Location:</label>
+      <select id="location" name="location" required>
+        {% for loc in fares.keys() %}
+        <option value="{{ loc }}">{{ loc }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="ticket_type">Ticket Type:</label>
+      <select id="ticket_type" name="ticket_type" required>
+        <option value="Regular">Regular - Comfortable bus</option>
+        <option value="VIP">VIP - Air conditioning</option>
+        <option value="VVIP">VVIP - Air conditioning & Free WiFi</option>
+      </select>
+
+      <button type="submit">Book Shuttle</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
