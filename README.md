@@ -1,4 +1,4 @@
-# 🚌 Student Shuttle Booking System
+# Student Shuttle Booking System
 
 A web-based shuttle booking system built with **Flask**, **SQLite**, and **Bootstrap**.  
 It allows students to book seats for different locations with options for Regular, VIP, and VVIP tickets.  
@@ -6,7 +6,7 @@ Administrators can monitor all bookings in real time.
 
 ---
 
-## 🚀 Features
+## Features
 - Student booking form with:
   - Name, Student ID, Department
   - Destination selection (Cape Coast, Koforidua, Kumasi, Ho)
@@ -23,7 +23,7 @@ Administrators can monitor all bookings in real time.
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 - [Python 3.10](https://www.python.org/)  
 - [Flask](https://flask.palletsprojects.com/)  
 - [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/)  
@@ -33,7 +33,7 @@ Administrators can monitor all bookings in real time.
 
 ---
 
-## 📂 Project Structure
+##   Project Structure
 ```
 shuttle_app/
 │── app.py               # Main Flask application
@@ -50,7 +50,7 @@ shuttle_app/
 
 ---
 
-## ⚙️ Installation (Run Locally)
+##  Installation (Run Locally)
 
 1. Clone the repository:
    ```bash
@@ -87,7 +87,7 @@ shuttle_app/
 
 ---
 
-## 🌐 Deployment (Render / Heroku)
+## Deployment (Render / Heroku)
 
 1. Push your project to GitHub.  
 2. On [Render](https://render.com) or [Heroku](https://www.heroku.com/):
@@ -100,19 +100,18 @@ shuttle_app/
      ```bash
      gunicorn app:app
      ```
-3. Deploy 🚀  
+3. Deploy 
 
 ---
 
-## 👥 Contributors
-- **Member A** – Backend Development  
-- **Member B** – Database Management  
-- **Member C** – Frontend Design  
-- **Member D** – Styling & Responsiveness  
-- **Member E** – Deployment & Documentation  
+##  Group Members
+- Baah Frimpong – Backend Development  
+- Amponsah Michael Halagbe – Database Management  
+- Nana Ato Dadzie – Frontend Design  
+- Osam Theodora – Styling & Responsiveness  
+- Forson Albert Ofori-Yaw – Deployment & Documentation  
 
 ---
 
-## 📜 License
-This project is for academic purposes.  
-Feel free to fork and modify for learning. 🚀
+## License
+This project is for academic purposes.   
